@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/simonvetter/modbus"
+	"github.com/packetviper/modbus"
 )
 
 func main() {

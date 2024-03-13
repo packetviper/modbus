@@ -33,14 +33,14 @@ $ ./modbus-cli --help
 
 ### Getting started
 ```bash
-$ go get github.com/simonvetter/modbus
+$ go get github.com/packetviper/modbus
 ```
 
 ### Using the client
 
 ```golang
 import (
-    "github.com/simonvetter/modbus"
+    "github.com/packetviper/modbus"
 )
 
 func main() {
