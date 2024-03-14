@@ -426,6 +426,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 					ClientAddr: clientAddr,
 					ClientRole: clientRole,
 					UnitId:     req.unitId,
+					FuncCode:   req.functionCode,
 					Addr:       addr,
 					Quantity:   quantity,
 					IsWrite:    false,
@@ -437,6 +438,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 						ClientAddr: clientAddr,
 						ClientRole: clientRole,
 						UnitId:     req.unitId,
+						FuncCode:   req.functionCode,
 						Addr:       addr,
 						Quantity:   quantity,
 					})
@@ -492,6 +494,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 				ClientAddr: clientAddr,
 				ClientRole: clientRole,
 				UnitId:     req.unitId,
+				FuncCode:   req.functionCode,
 				Addr:       addr,
 				Quantity:   1, // request for a single coil
 				IsWrite:    true, // this is a write request
@@ -559,6 +562,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 				ClientAddr: clientAddr,
 				ClientRole: clientRole,
 				UnitId:     req.unitId,
+				FuncCode:   req.functionCode,
 				Addr:       addr,
 				Quantity:   quantity,
 				IsWrite:    true, // this is a write request
@@ -612,6 +616,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 						ClientAddr: clientAddr,
 						ClientRole: clientRole,
 						UnitId:     req.unitId,
+						FuncCode:   req.functionCode,
 						Addr:       addr,
 						Quantity:   quantity,
 						IsWrite:    false,
@@ -623,6 +628,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 						ClientAddr: clientAddr,
 						ClientRole: clientRole,
 						UnitId:     req.unitId,
+						FuncCode:   req.functionCode,
 						Addr:       addr,
 						Quantity:   quantity,
 					})
@@ -673,6 +679,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 					ClientAddr: clientAddr,
 					ClientRole: clientRole,
 					UnitId:     req.unitId,
+					FuncCode:   req.functionCode,
 					Addr:       addr,
 					Quantity:   1, // request for a single register
 					IsWrite:    true, // request is a write
@@ -738,6 +745,7 @@ func (ms *ModbusServer) handleTransport(t transport, clientAddr string, clientRo
 					ClientAddr: clientAddr,
 					ClientRole: clientRole,
 					UnitId:     req.unitId,
+					FuncCode:   req.functionCode,
 					Addr:       addr,
 					Quantity:   quantity,
 					IsWrite:    true, // this is a write request
