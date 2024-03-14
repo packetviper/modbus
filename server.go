@@ -43,6 +43,7 @@ type CoilsRequest struct {
 	ClientAddr string  // the source (client) IP address
 	ClientRole string  // the client role as encoded in the client certificate (tcp+tls only)
 	UnitId     uint8   // the requested unit id (slave id)
+	FuncCode   uint8   // function code requested by client
 	Addr       uint16  // the base coil address requested
 	Quantity   uint16  // the number of consecutive coils covered by this request
 	                   // (first address: Addr, last address: Addr + Quantity - 1)
@@ -56,6 +57,7 @@ type DiscreteInputsRequest struct {
 	ClientAddr string  // the source (client) IP address
 	ClientRole string  // the client role as encoded in the client certificate (tcp+tls only)
 	UnitId     uint8   // the requested unit id (slave id)
+	FuncCode   uint8   // function code requested by client
 	Addr       uint16  // the base discrete input address requested
 	Quantity   uint16  // the number of consecutive discrete inputs covered by this request
 }
@@ -65,6 +67,7 @@ type HoldingRegistersRequest struct {
 	ClientAddr string   // the source (client) IP address
 	ClientRole string   // the client role as encoded in the client certificate (tcp+tls only)
 	UnitId     uint8    // the requested unit id (slave id)
+	FuncCode   uint8   // function code requested by client
 	Addr       uint16   // the base register address requested
 	Quantity   uint16   // the number of consecutive registers covered by this request
 	IsWrite    bool     // true if the request is a write, false if a read
@@ -77,6 +80,7 @@ type InputRegistersRequest struct {
 	ClientAddr string   // the source (client) IP address
 	ClientRole string   // the client role as encoded in the client certificate (tcp+tls only)
 	UnitId     uint8    // the requested unit id (slave id)
+	FuncCode   uint8   // function code requested by client
 	Addr       uint16   // the base register address requested
 	Quantity   uint16   // the number of consecutive registers covered by this request
 }
