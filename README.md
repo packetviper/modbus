@@ -1,4 +1,13 @@
-## Go modbus stack
+# Go modbus stack
+## PacketViper, LLC fork
+
+### **Important Note**
+This package is not to be confused with the server implementation
+distributed with our platform, 
+`github.com/packetviper/go-packetviper/pkg/modbus`. Developers looking
+to add features will most likely want to go there. In the case that you
+would like to add to or modify the underlying library, then look no
+further.
 
 ### Description
 This package is a go implementation of the modbus protocol.
